@@ -1,0 +1,110 @@
+
+.posts {
+    @extend %flexbox;
+    width: 100%;
+
+    .post {
+        @extend %flexbox;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+
+        @media only screen and (max-width:$screenSizeXl) {
+            padding: 16px;
+        }
+
+        div:nth-child(1) {
+            display: flex;
+            justify-content: center;
+            width: 62%;
+            height: 69%;
+
+            @media only screen and (max-width:$screenSizeLg) {
+                width: 100%;
+                height: 100%;
+            }
+
+            a {
+                display: flex;
+                justify-content: center;
+                text-decoration: none;
+                width: 100%;
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    transition: all 200ms;
+
+                    &:hover {
+                        opacity: 0.9;
+                    }
+                }
+            }
+        }
+
+        div:nth-child(2) {
+            @extend %flexbox;
+            flex-direction: column;
+            padding: 24px;
+
+            p:nth-child(1) {
+                font-size: 20px;
+                font-weight: 0.5px;
+                font-family: Montserrat, sans-serif;
+                text-align: center;
+            }
+
+            p:nth-child(2) {
+                color: $whiteColor;
+                font-size: 12px;
+                font-weight: 0.5px;
+                letter-spacing: 1px;
+                padding: 12px;
+                font-family: Montserrat, sans-serif;
+                text-align: center;
+
+                a {
+                    color: $whiteColor;
+                    transition: all 200ms;
+
+                    &:hover {
+                        color: $blackColor;
+                    }
+                }
+            }
+        }
+
+        div:nth-child(3) {
+            @extend %flexbox;
+            flex-direction: column;
+            width: 40%;
+
+
+            @media only screen and (max-width:$screenSizeLg) {
+                width: 90%;
+            }
+
+            p {
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+
+        div:nth-child(4) {
+            padding: 3% 0 5% 0;
+
+            a {
+                font-family: Montserrat, sans-serif;
+                font-size: 11px;
+                letter-spacing: 1px;
+                transition: all 200ms;
+
+                &:hover {
+                    color: $whiteColor;
+                }
+            }
+        }
+    }
+}

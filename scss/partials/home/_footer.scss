@@ -1,0 +1,40 @@
+
+footer {
+    @extend %flexbox;
+    border-top: 1.5px solid #DEDEDE;
+    width: 100%;
+    height: 19%;
+
+    div {
+        @extend %flexbox;
+        flex-direction: column;
+
+        div:nth-child(1) {
+            @extend %flexbox;
+            flex-direction: row;
+
+            a {
+                margin: 7px;
+                transition: all 200ms;
+
+                &:hover {
+                    opacity: 0.5;
+                }
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+
+        div:nth-child(2) {
+            @extend %flexbox;
+
+            p {
+                font-family: Montserrat, sans-serif;
+                font-size: 13px;
+                color: $whiteColor;
+            }
+        }
+    }
+}

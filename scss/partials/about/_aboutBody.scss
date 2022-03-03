@@ -1,0 +1,51 @@
+
+.body {
+    @extend %flexbox;
+    width: 100%;
+    margin-bottom: 60px;
+
+    div {
+        @extend %flexbox;
+        flex-direction: column;
+
+        div:nth-child(1) {
+            width: 100%;
+
+            img {
+                width: 15rem;
+                height: 15rem;
+                border-radius: 50%;
+            }
+        }
+
+        div:nth-child(2) {
+            padding: 16px;
+
+            h2 {
+                font-size: 26px;
+                color: #424242;
+                text-align: center;
+            }
+        }
+
+        div:nth-child(3) {
+            width: 100%;
+
+            p { 
+                width: 35rem;
+                text-align: center;
+                font-size: 14px;
+                font-family: Arial, sans-serif;
+                line-height: 24px;
+
+                @media only screen and (max-width: 666px) {
+                    width: 100%;
+                }
+
+                &:nth-child(2) {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
